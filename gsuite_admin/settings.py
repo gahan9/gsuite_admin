@@ -15,7 +15,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+CREDENTIALS_DIR = os.path.join(BASE_DIR, 'credentials')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
@@ -26,7 +26,7 @@ SECRET_KEY = '&#f247#z@7l)+kg___o+s%%j&f(+na9$8xxc0kr9z_kg8mzqkk'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -120,3 +120,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# GSuite Credentials
+CLIENT_ID = os.path.join(CREDENTIALS_DIR, 'client_id.json')
+SERVICE_ACCOUNT_ID = os.path.join(CREDENTIALS_DIR, 'service-account.json')
